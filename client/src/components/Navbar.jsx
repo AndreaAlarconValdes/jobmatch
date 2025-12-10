@@ -50,6 +50,6 @@ const HeaderUserButton = () => {
   }
 
   return isLoggedIn
-    ? <button onClick={handleLogout}>Cerrar sesión</button>
+    ? <button onClick={handleLogout}>Log out</button>
     : <button onClick={login}>Sign in</button>
 }

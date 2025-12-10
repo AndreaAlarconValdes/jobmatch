@@ -15,8 +15,7 @@ export default function Login() {
     const formData = new FormData(e.target)
     const email = formData.get(emailId)
     const password = formData.get(passwordId)
-    
-    // Mock login - en una app real, harías una petición a la API
+
     if (email && password) {
       login()
       navigate('/search')
@@ -26,15 +25,15 @@ export default function Login() {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
-        <h1 className={styles.title}>Iniciar Sesión</h1>
+        <h1 className={styles.title}>Login</h1>
         <p className={styles.subtitle}>
-          Accede a tu cuenta para aplicar a ofertas
+          Log in to your account to apply for job offers
         </p>
 
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.formGroup}>
             <label htmlFor={emailId} className={styles.label}>
-              Email
+              Email address
             </label>
             <input
               id={emailId}
@@ -48,7 +47,7 @@ export default function Login() {
 
           <div className={styles.formGroup}>
             <label htmlFor={passwordId} className={styles.label}>
-              Contraseña
+              Password
             </label>
             <input
               id={passwordId}
@@ -61,14 +60,14 @@ export default function Login() {
           </div>
 
           <button type="submit" className={styles.submitButton}>
-            Iniciar Sesión
+            Continue
           </button>
         </form>
 
         <p className={styles.footer}>
-          ¿No tienes cuenta?{' '}
+          Don't you have an account?{' '}
           <a href="/register" className={styles.link}>
-            Regístrate aquí
+            Create an account here
           </a>
         </p>
       </div>

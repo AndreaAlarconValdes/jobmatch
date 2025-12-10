@@ -7,12 +7,13 @@
 }
 
 .card {
-  background: rgba(25, 25, 35, 0.8);
+  background: var(--input-bg);
+  border: 1px solid #e4e2e0;
   border-radius: 1rem;
   padding: 2.5rem;
   width: 100%;
   max-width: 450px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 15px -3px var(--shadow);
 }
 
 .title {
@@ -25,7 +26,6 @@
 
 .subtitle {
   color: var(--text-muted);
-  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -49,18 +49,15 @@
 
 .input {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid black;
   border-radius: 0.5rem;
   padding: 0.75rem 1rem;
   color: var(--text-primary);
   font-size: 1rem;
-  transition: all 0.2s;
 }
 
 .input:focus {
-  outline: none;
-  border-color: #09f;
-  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid var(--primary);
 }
 
 .input::placeholder {
@@ -68,7 +65,7 @@
 }
 
 .submitButton {
-  background: #09f;
+  background: var(--primary);
   color: white;
   border: none;
   font-weight: 600;
@@ -81,7 +78,7 @@
 }
 
 .submitButton:hover {
-  background: #0088e6;
+  background: var(--primary-hover);
 }
 
 .footer {
@@ -92,7 +89,7 @@
 }
 
 .link {
-  color: #09f;
+  color: var(--primary);
   text-decoration: none;
   font-weight: 500;
 }

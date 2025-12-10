@@ -1,55 +1,66 @@
 .container {
-  background: rgba(25, 25, 35, 0.8);
+  background: var(--input-bg);
+  border: 1px solid #e4e2e0;
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 15px -3px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
 }
-
 .header {
-  text-align: center;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 2rem;
-}
-
-.avatar {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 50%;
+  border-bottom: 1px solid #e4e2e0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userInfo svg {
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem;
+  width: 110px;
+  height: 110px;
   color: white;
+
 }
 
-.avatar svg {
-  width: 60px;
-  height: 60px;
-}
-
-.name {
+.userInfo h1 {
   font-size: 2rem;
   font-weight: bold;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
 }
 
-.email {
+.userInfo h4 {
+  color: var(--text-muted);
+
+}
+
+.userInfo p {
   color: var(--text-muted);
   font-size: 1rem;
 }
 
+
 .section {
-  margin-bottom: 2rem;
+display: flex;
+flex-direction: column;
+gap: .5rem;
 }
 
 .sectionTitle {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--text-primary);
-  margin-bottom: 1rem;
 }
 
 .infoGrid {
@@ -61,7 +72,6 @@
 .infoItem {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .infoLabel {
@@ -76,27 +86,19 @@
 }
 
 .experienceItem {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.experienceItem:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
+
 
 .experienceTitle {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
 }
 
 .experienceCompany {
   color: var(--text-secondary);
-  margin-bottom: 0.5rem;
 }
 
 .experienceDescription {
@@ -118,53 +120,4 @@
   border-radius: 2rem;
   font-size: 0.875rem;
   font-weight: 500;
-}
-
-.actions {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.editButton {
-  flex: 1;
-  background: #09f;
-  color: white;
-  border: none;
-  font-weight: 600;
-  padding: 0.875rem;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.editButton:hover {
-  background: #0088e6;
-}
-
-.logoutButton {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-primary);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  font-weight: 600;
-  padding: 0.875rem;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.logoutButton:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-@media (max-width: 640px) {
-  .actions {
-    flex-direction: column;
-  }
 }

@@ -46,7 +46,7 @@ const useFilters = () => {
         params.append('offset', offset)
 
         const queryParams = params.toString()
-      
+
         const response = await fetch(`https://jscamp-api.vercel.app/api/jobs?${queryParams}`)
         const json = await response.json()
 
@@ -124,21 +124,25 @@ export default function SearchPage() {
   } = useFilters()
 
   const title = loading
-    ? `Cargando... - DevJobs`
-    : `Resultados: ${total}, Página ${currentPage} - DevJobs`
+    ? `Loading... - JobMatch`
+    : `Results: ${total}, Page ${currentPage} - JobMatch`
 
   return (
     <main>
       <title>{title}</title>
-      <meta name="description" content="Explora miles de oportunidades laborales en el sector tecnológico. Encuentra tu próximo empleo en DevJobs." />
-
-      <SearchFormSection
-        initialText={textToFilter}
-        initialFilters={filters}
-        onSearch={handleSearch}
-        onTextFilter={handleTextFilter}
-      />
-
+      <meta name="description" content="Explore thousands of job opportunities in the tech sector. Find your next job on JobMatch." />
+      <section className={styles.searchHeader}>
+        <h1>
+          Find your next <span className="circle">job</span>
+        </h1>
+        <p>Explore thousands of opportunities in the technology sector</p>
+        <SearchFormSection
+          initialText={textToFilter}
+          initialFilters={filters}
+          onSearch={handleSearch}
+          onTextFilter={handleTextFilter}
+        />
+      </section>
       <section className={styles.searchResults}>
         <h2 style={{ textAlign: 'center' }}>Search results</h2>
 
